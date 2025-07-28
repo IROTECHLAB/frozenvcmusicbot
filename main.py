@@ -64,7 +64,7 @@ API_ID = int(os.environ.get("API_ID"))
 API_HASH = os.environ.get("API_HASH")
 BOT_TOKEN = os.environ.get("BOT_TOKEN")
 ASSISTANT_SESSION = os.environ.get("ASSISTANT_SESSION")
-OWNER_ID = int(os.getenv("OWNER_ID", "5268762773"))
+OWNER_ID = int(os.getenv("OWNER_ID", "7994776745"))
 
 # ——— Monkey-patch resolve_peer ——————————————
 logging.getLogger("pyrogram").setLevel(logging.ERROR)
@@ -190,7 +190,7 @@ def safe_handler(func):
             )
             print(error_text)
             # Log the error to support
-            await bot.send_message(5268762773, error_text)
+            await bot.send_message(7994776745, error_text)
     return wrapper
 
 
@@ -327,8 +327,8 @@ async def fetch_youtube_link_backup(query):
     except Exception as e:
         raise Exception(f"Backup Search API error: {e}")
     
-BOT_NAME = os.environ.get("BOT_NAME", "Frozen Music")
-BOT_LINK = os.environ.get("BOT_LINK", "https://t.me/vcmusiclubot")
+BOT_NAME = os.environ.get("BOT_NAME", "IRO MUSIC")
+BOT_LINK = os.environ.get("BOT_LINK", "http://t.me/irotech_2_musicbot")
 
 from pyrogram.errors import UserAlreadyParticipant, RPCError
 
@@ -399,10 +399,10 @@ async def start_handler(_, message):
     buttons = [
         [
             InlineKeyboardButton(f"➕ {add_me_text}", url=f"{BOT_LINK}?startgroup=true"),
-            InlineKeyboardButton(f"📢 {updates_text}", url="https://t.me/vibeshiftbots")
+            InlineKeyboardButton(f"📢 {updates_text}", url="https://t.me/irotechlab")
         ],
         [
-            InlineKeyboardButton(f"💬 {support_text}", url="https://t.me/Frozensupport1"),
+            InlineKeyboardButton(f"💬 {support_text}", url="https://t.me/ironmanhindigming1"),
             InlineKeyboardButton(f"❓ {help_text}", callback_data="show_help")
         ]
     ]
@@ -454,10 +454,10 @@ async def go_back_callback(_, callback_query):
     buttons = [
         [
             InlineKeyboardButton(f"➕ {add_me_text}", url=f"{BOT_LINK}?startgroup=true"),
-            InlineKeyboardButton(f"📢 {updates_text}", url="https://t.me/vibeshiftbots")
+            InlineKeyboardButton(f"📢 {updates_text}", url="https://t.me/irotechlab")
         ],
         [
-            InlineKeyboardButton(f"💬 {support_text}", url="https://t.me/Frozensupport1"),
+            InlineKeyboardButton(f"💬 {support_text}", url="https://t.me/ironmanhindigming1"),
             InlineKeyboardButton(f"❓ {help_text}", callback_data="show_help")
         ]
     ]
@@ -570,7 +570,7 @@ async def play_handler(_, message: Message):
 
     # If replying to an audio/video message, handle local playback
     if message.reply_to_message and (message.reply_to_message.audio or message.reply_to_message.video):
-        processing_message = await message.reply("❄️")
+        processing_message = await message.reply("🔥")
 
         # Fetch fresh media reference and download
         orig = message.reply_to_message
@@ -823,8 +823,8 @@ def format_time(seconds: float) -> str:
 def get_progress_bar_styled(elapsed: float, total: float, bar_length: int = 14) -> str:
     """
     Build a progress bar string in the style:
-      elapsed_time  <dashes>❄️<dashes>  total_time
-    For example: 0:30 —❄️———— 3:09
+      elapsed_time  <dashes>🔥<dashes>  total_time
+    For example: 0:30 —🔥———— 3:09
     """
     if total <= 0:
         return "Progress: N/A"
@@ -834,7 +834,7 @@ def get_progress_bar_styled(elapsed: float, total: float, bar_length: int = 14) 
         marker_index = bar_length - 1
     left = "━" * marker_index
     right = "─" * (bar_length - marker_index - 1)
-    bar = left + "❄️" + right
+    bar = left + "⭐" + right
     return f"{format_time(elapsed)} {bar} {format_time(total)}"
 
 
@@ -893,7 +893,7 @@ async def update_progress_caption(
 
 
 
-LOG_CHAT_ID = "@frozenmusiclogs"
+LOG_CHAT_ID = "@irotechmusic2logs"
 
 async def fallback_local_playback(chat_id: int, message: Message, song_info: dict):
     playback_mode[chat_id] = "local"
@@ -1523,8 +1523,8 @@ if __name__ == "__main__":
         sys.exit(1)
 
     # Fetch bot name and link and set default values from environment
-    BOT_NAME = os.environ.get("BOT_NAME", "Frozen Music")
-    BOT_LINK = os.environ.get("BOT_LINK", "https://t.me/vcmusiclubot")
+    BOT_NAME = os.environ.get("BOT_NAME", "IRO MUSIC")
+    BOT_LINK = os.environ.get("BOT_LINK", "https://t.me/irotech_2_musicbot")
     logger.info(f"Bot name set to: {BOT_NAME}")
     logger.info(f"Bot link set to: {BOT_LINK}")
 
